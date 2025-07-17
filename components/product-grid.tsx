@@ -52,7 +52,14 @@ export default function ProductGrid() {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <p className="text-gray-600">{products.length} products found</p>
-        <select className="border border-gray-300 rounded-md px-3 py-2">
+        <label htmlFor="sort-products" className="sr-only">
+          Sort products
+        </label>
+        <select
+          id="sort-products"
+          className="border border-gray-300 rounded-md px-3 py-2"
+          aria-label="Sort products"
+        >
           <option>Sort by: Featured</option>
           <option>Price: Low to High</option>
           <option>Price: High to Low</option>
@@ -124,7 +131,7 @@ export default function ProductGrid() {
                   disabled={!variant}
                 >
                   <Plus className="w-4 h-4 mr-2" />
-                  Add to Cart
+                  Bungkus, Bos!
                 </Button>
               </CardFooter>
             </Card>
