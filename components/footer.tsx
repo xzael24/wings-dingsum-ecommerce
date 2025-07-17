@@ -35,31 +35,31 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Tautan Cepat</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">
-                  Home
+                  Beranda
                 </Link>
               </li>
               <li>
                 <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
-                  Products
+                  Produk
                 </Link>
               </li>
               <li>
                 <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
-                  About Us
+                  Tentang Kami
                 </Link>
               </li>
               <li>
                 <Link href="/contact" className="text-gray-400 hover:text-white transition-colors">
-                  Contact
+                  Kontak
                 </Link>
               </li>
               <li>
                 <Link href="/cart" className="text-gray-400 hover:text-white transition-colors">
-                  Cart
+                  Keranjang
                 </Link>
               </li>
             </ul>
@@ -67,26 +67,26 @@ export default function Footer() {
 
           {/* Customer Service */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Customer Service</h4>
+            <h4 className="text-lg font-semibold mb-4">Layanan Pelanggan</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="/account" className="text-gray-400 hover:text-white transition-colors">
-                  My Account
+                  Akun Saya
                 </Link>
               </li>
               <li>
                 <Link href="/orders" className="text-gray-400 hover:text-white transition-colors">
-                  Order History
+                  Riwayat Pesanan
                 </Link>
               </li>
               <li>
                 <Link href="/shipping" className="text-gray-400 hover:text-white transition-colors">
-                  Shipping Info
+                  Info Pengiriman
                 </Link>
               </li>
               <li>
                 <Link href="/returns" className="text-gray-400 hover:text-white transition-colors">
-                  Returns
+                  Pengembalian
                 </Link>
               </li>
               <li>
@@ -99,7 +99,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <h4 className="text-lg font-semibold mb-4">Kontak</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-red-400 flex-shrink-0" />
@@ -119,16 +119,16 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© 2024 Wing's Dingsum Mentai Tobiko. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2024 Wing's Dingsum Mentai Tobiko. Hak cipta dilindungi undang-undang.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
+                Kebijakan Privasi
               </Link>
               <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
+                Syarat & Ketentuan
               </Link>
               <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
+                Kebijakan Cookie
               </Link>
             </div>
           </div>

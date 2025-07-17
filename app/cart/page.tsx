@@ -34,13 +34,13 @@ export default function CartPage() {
             <ShoppingBag className="w-24 h-24 text-gray-300 mx-auto mb-6" />
           </div>
           <h1 className="text-2xl font-bold text-gray-900 mb-4 hover:text-red-600 transition-colors duration-300">
-            Your cart is empty
+            Keranjang Anda kosong
           </h1>
           <p className="text-gray-600 mb-8 hover:text-gray-800 transition-colors">
-            Looks like you haven't added any delicious dim sum to your cart yet.
+            Sepertinya Anda belum menambahkan dimsum lezat ke keranjang.
           </p>
           <Button asChild className="bg-red-600 hover:bg-red-700 btn-animated hover-lift hover-glow">
-            <Link href="/products">Start Shopping</Link>
+            <Link href="/products">Belanja Sekarang</Link>
           </Button>
         </AnimatedSection>
       </div>
@@ -57,13 +57,13 @@ export default function CartPage() {
         >
           <Link href="/products">
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Continue Shopping
+            Lanjut Belanja
           </Link>
         </Button>
         <h1 className="text-3xl font-bold text-gray-900 hover:text-red-600 transition-colors duration-300 cursor-default">
-          Shopping Cart
+          Keranjang Belanja
         </h1>
-        <p className="text-gray-600 hover:text-gray-800 transition-colors">{items.length} items in your cart</p>
+        <p className="text-gray-600 hover:text-gray-800 transition-colors">{items.length} item di keranjang Anda</p>
       </AnimatedSection>
 
       <div className="grid lg:grid-cols-3 gap-8">
@@ -132,7 +132,7 @@ export default function CartPage() {
         <AnimatedSection animation="fade-left" delay={200} className="lg:col-span-1">
           <Card className="sticky top-4 hover:shadow-lg transition-all duration-300 hover-lift">
             <CardHeader>
-              <CardTitle className="hover:text-red-600 transition-colors duration-300">Order Summary</CardTitle>
+              <CardTitle className="hover:text-red-600 transition-colors duration-300">Ringkasan Pesanan</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="flex justify-between hover:bg-gray-50 p-2 rounded transition-colors">
@@ -140,16 +140,16 @@ export default function CartPage() {
                 <span className="font-medium">{`Rp${total.toLocaleString("id-ID")}`}</span>
               </div>
               <div className="flex justify-between hover:bg-gray-50 p-2 rounded transition-colors">
-                <span>Shipping</span>
+                <span>Ongkir</span>
                 <span className="font-medium">{shipping === 0 ? "Gratis" : `Rp${shipping.toLocaleString("id-ID")}`}</span>
               </div>
               <div className="flex justify-between hover:bg-gray-50 p-2 rounded transition-colors">
-                <span>Tax</span>
+                <span>Pajak</span>
                 <span className="font-medium">{`Rp${tax.toLocaleString("id-ID")}`}</span>
               </div>
               {discount > 0 && (
                 <div className="flex justify-between text-green-600 hover:bg-green-50 p-2 rounded transition-colors">
-                  <span>Discount</span>
+                  <span>Diskon</span>
                   <span className="font-medium">-Rp{discount.toLocaleString("id-ID")}</span>
                 </div>
               )}
@@ -162,7 +162,7 @@ export default function CartPage() {
               <div className="space-y-2">
                 <div className="flex space-x-2">
                   <Input
-                    placeholder="Promo code"
+                    placeholder="Kode promo"
                     value={promoCode}
                     onChange={(e) => setPromoCode(e.target.value)}
                     className="focus:border-red-500 transition-colors"
@@ -172,7 +172,7 @@ export default function CartPage() {
                     onClick={applyPromoCode}
                     className="hover:bg-red-50 hover:border-red-500 hover:text-red-600 transition-all duration-300"
                   >
-                    Apply
+                    Terapkan
                   </Button>
                 </div>
                 {total < 50 && (
@@ -186,7 +186,7 @@ export default function CartPage() {
                 asChild
                 className="w-full bg-red-600 hover:bg-red-700 text-white py-3 text-sm sm:text-base btn-animated hover-lift hover-glow"
               >
-                <Link href="/checkout">Proceed to Checkout</Link>
+                <Link href="/checkout">Lanjut ke Pembayaran</Link>
               </Button>
             </CardContent>
           </Card>

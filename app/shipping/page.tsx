@@ -4,43 +4,43 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
 export const metadata = {
-  title: "Shipping Information - Wing's Dingsum Mentai Tobiko",
-  description: "Learn about our shipping options, delivery areas, and policies.",
+  title: "Informasi Pengiriman - Wing's Dingsum Mentai Tobiko",
+  description: "Pelajari tentang opsi pengiriman, area pengantaran, dan kebijakan kami.",
 }
 
 const shippingOptions = [
   {
     icon: Truck,
-    title: "Standard Delivery",
-    time: "5-7 Business Days",
-    price: "Free on orders $50+",
-    description: "Our standard delivery option for most orders. Perfect for planning ahead.",
+    title: "Pengiriman Reguler",
+    time: "5-7 Hari Kerja",
+    price: "Gratis untuk pesanan di atas Rp750.000",
+    description: "Opsi pengiriman standar untuk sebagian besar pesanan. Cocok untuk yang sudah direncanakan.",
   },
   {
     icon: Clock,
-    title: "Express Delivery",
-    time: "2-3 Business Days",
-    price: "$12.99",
-    description: "Faster delivery for when you need your dim sum sooner.",
+    title: "Pengiriman Ekspres",
+    time: "2-3 Hari Kerja",
+    price: "Rp200.000",
+    description: "Pengiriman lebih cepat jika ingin dimsum segera sampai.",
   },
   {
     icon: Shield,
-    title: "Same Day Delivery",
-    time: "Within 4 Hours",
-    price: "$19.99",
-    description: "Available in select areas. Order before 2PM for same-day delivery.",
+    title: "Pengiriman Hari yang Sama",
+    time: "Dalam 4 Jam",
+    price: "Rp300.000",
+    description: "Tersedia di area tertentu. Pesan sebelum jam 2 siang untuk pengiriman di hari yang sama.",
   },
 ]
 
 const deliveryAreas = [
-  "Manhattan, NY",
-  "Brooklyn, NY",
-  "Queens, NY",
-  "Bronx, NY",
-  "Staten Island, NY",
-  "Jersey City, NJ",
-  "Hoboken, NJ",
-  "Long Island City, NY",
+  "Jakarta Pusat",
+  "Jakarta Barat",
+  "Jakarta Timur",
+  "Jakarta Selatan",
+  "Jakarta Utara",
+  "Tangerang",
+  "Bekasi",
+  "Depok",
 ]
 
 export default function ShippingPage() {
@@ -51,10 +51,10 @@ export default function ShippingPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-              Shipping & <span className="text-red-600">Delivery</span>
+              Pengiriman & <span className="text-red-600">Antar</span>
             </h1>
             <p className="text-base sm:text-xl text-gray-600 leading-relaxed">
-              Fresh dim sum delivered right to your door. Learn about our shipping options and delivery areas.
+              Dimsum segar diantar langsung ke rumah Anda. Pelajari opsi pengiriman dan area layanan kami.
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function ShippingPage() {
         {/* Shipping Options */}
         <section className="mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
-            Delivery <span className="text-red-600">Options</span>
+            Opsi <span className="text-red-600">Pengiriman</span>
           </h2>
           <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
             {shippingOptions.map((option, index) => (
@@ -90,11 +90,10 @@ export default function ShippingPage() {
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
-                Delivery <span className="text-red-600">Areas</span>
+                Area <span className="text-red-600">Pengantaran</span>
               </h2>
               <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8">
-                We currently deliver to the following areas. Don't see your location? Contact us to see if we can
-                arrange special delivery.
+                Saat ini kami melayani pengantaran ke area berikut. Tidak menemukan lokasi Anda? Hubungi kami untuk pengantaran khusus.
               </p>
               <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
                 {deliveryAreas.map((area, index) => (
@@ -109,16 +108,16 @@ export default function ShippingPage() {
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
                   <Package className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
-                  <span className="text-lg sm:text-xl">Packaging & Freshness</span>
+                  <span className="text-lg sm:text-xl">Kemasan & Kesegaran</span>
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-3 sm:space-y-4">
-                <p className="text-sm sm:text-base text-gray-600">• Insulated packaging to maintain temperature</p>
-                <p className="text-sm sm:text-base text-gray-600">• Eco-friendly, recyclable materials</p>
+                <p className="text-sm sm:text-base text-gray-600">• Kemasan berinsulasi untuk menjaga suhu</p>
+                <p className="text-sm sm:text-base text-gray-600">• Bahan ramah lingkungan & dapat didaur ulang</p>
                 <p className="text-sm sm:text-base text-gray-600">
-                  • Steam-fresh guarantee within 2 hours of preparation
+                  • Jaminan dimsum tetap hangat maksimal 2 jam setelah dibuat
                 </p>
-                <p className="text-sm sm:text-base text-gray-600">• Detailed reheating instructions included</p>
+                <p className="text-sm sm:text-base text-gray-600">• Petunjuk pemanasan ulang disertakan</p>
               </CardContent>
             </Card>
           </div>
@@ -127,54 +126,54 @@ export default function ShippingPage() {
         {/* Shipping Policies */}
         <section className="mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
-            Shipping <span className="text-red-600">Policies</span>
+            Kebijakan <span className="text-red-600">Pengiriman</span>
           </h2>
           <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg sm:text-xl">Order Processing</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">Proses Pesanan</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 sm:space-y-3">
-                <p className="text-sm sm:text-base text-gray-600">• Orders placed before 2PM are processed same day</p>
-                <p className="text-sm sm:text-base text-gray-600">• Weekend orders processed on Monday</p>
-                <p className="text-sm sm:text-base text-gray-600">• You'll receive tracking information via email</p>
-                <p className="text-sm sm:text-base text-gray-600">• Special orders require 24-48 hours notice</p>
+                <p className="text-sm sm:text-base text-gray-600">• Pesanan sebelum jam 2 siang diproses di hari yang sama</p>
+                <p className="text-sm sm:text-base text-gray-600">• Pesanan akhir pekan diproses hari Senin</p>
+                <p className="text-sm sm:text-base text-gray-600">• Info resi akan dikirimkan via email</p>
+                <p className="text-sm sm:text-base text-gray-600">• Pesanan khusus butuh pemberitahuan 1-2 hari sebelumnya</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg sm:text-xl">Delivery Guidelines</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">Panduan Pengantaran</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 sm:space-y-3">
-                <p className="text-sm sm:text-base text-gray-600">• Someone must be present to receive the order</p>
-                <p className="text-sm sm:text-base text-gray-600">• We'll call 15 minutes before arrival</p>
-                <p className="text-sm sm:text-base text-gray-600">• Contactless delivery available upon request</p>
-                <p className="text-sm sm:text-base text-gray-600">• Delivery to apartment lobbies accepted</p>
+                <p className="text-sm sm:text-base text-gray-600">• Harus ada penerima di lokasi saat pesanan tiba</p>
+                <p className="text-sm sm:text-base text-gray-600">• Kami akan menghubungi 15 menit sebelum tiba</p>
+                <p className="text-sm sm:text-base text-gray-600">• Pengantaran tanpa kontak fisik tersedia atas permintaan</p>
+                <p className="text-sm sm:text-base text-gray-600">• Pengantaran ke lobi apartemen diperbolehkan</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg sm:text-xl">Temperature Control</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">Kontrol Suhu</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 sm:space-y-3">
-                <p className="text-sm sm:text-base text-gray-600">• Insulated bags maintain optimal temperature</p>
-                <p className="text-sm sm:text-base text-gray-600">• Dry ice used for longer distance deliveries</p>
-                <p className="text-sm sm:text-base text-gray-600">• Maximum 4-hour delivery window</p>
-                <p className="text-sm sm:text-base text-gray-600">• Refrigerate immediately upon arrival</p>
+                <p className="text-sm sm:text-base text-gray-600">• Tas berinsulasi menjaga suhu tetap optimal</p>
+                <p className="text-sm sm:text-base text-gray-600">• Es kering digunakan untuk pengiriman jarak jauh</p>
+                <p className="text-sm sm:text-base text-gray-600">• Maksimal waktu pengantaran 4 jam</p>
+                <p className="text-sm sm:text-base text-gray-600">• Segera simpan di kulkas setelah diterima</p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg sm:text-xl">Special Requests</CardTitle>
+                <CardTitle className="text-lg sm:text-xl">Permintaan Khusus</CardTitle>
               </CardHeader>
               <CardContent className="space-y-2 sm:space-y-3">
-                <p className="text-sm sm:text-base text-gray-600">• Dietary restrictions accommodated</p>
-                <p className="text-sm sm:text-base text-gray-600">• Corporate catering available</p>
-                <p className="text-sm sm:text-base text-gray-600">• Gift wrapping service offered</p>
-                <p className="text-sm sm:text-base text-gray-600">• Bulk orders welcome with advance notice</p>
+                <p className="text-sm sm:text-base text-gray-600">• Permintaan diet khusus bisa dilayani</p>
+                <p className="text-sm sm:text-base text-gray-600">• Katering perusahaan tersedia</p>
+                <p className="text-sm sm:text-base text-gray-600">• Layanan bungkus kado tersedia</p>
+                <p className="text-sm sm:text-base text-gray-600">• Pesanan besar diterima dengan pemberitahuan sebelumnya</p>
               </CardContent>
             </Card>
           </div>
@@ -182,13 +181,13 @@ export default function ShippingPage() {
 
         {/* CTA Section */}
         <section className="text-center bg-white rounded-2xl p-6 sm:p-12 shadow-lg">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Ready to Order?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Siap Pesan?</h2>
           <p className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Experience our premium dim sum delivered fresh to your door. Free shipping on orders over $50!
+            Rasakan dimsum premium kami diantar segar ke rumah Anda. Gratis ongkir untuk pesanan di atas Rp750.000!
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <Button asChild size="lg" className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 text-sm sm:text-base">
-              <Link href="/products">Browse Menu</Link>
+              <Link href="/products">Lihat Menu</Link>
             </Button>
             <Button
               asChild
@@ -196,7 +195,7 @@ export default function ShippingPage() {
               size="lg"
               className="border-red-600 text-red-600 hover:bg-red-50 px-6 py-3 text-sm sm:text-base"
             >
-              <Link href="/contact">Contact Us</Link>
+              <Link href="/contact">Hubungi Kami</Link>
             </Button>
           </div>
         </section>
